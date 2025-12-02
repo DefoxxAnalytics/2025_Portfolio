@@ -1,0 +1,2331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M. Lawali | 2025 Annual Project Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #fafafa;
+            --bg-secondary: #ffffff;
+            --bg-accent: #f5f5f5;
+            --text-primary: #1a1a1a;
+            --text-secondary: #4a4a4a;
+            --text-muted: #737373;
+            --accent: #0f4c81;
+            --accent-light: #1a5c96;
+            --accent-dark: #0a3a63;
+            --success: #0d7377;
+            --border: #e5e5e5;
+            --border-dark: #d4d4d4;
+        }
+
+        /* Dark mode variables */
+        [data-theme="dark"] {
+            --bg-primary: #0f1419;
+            --bg-secondary: #1a2028;
+            --bg-accent: #242d38;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --accent: #3b82f6;
+            --accent-light: #60a5fa;
+            --accent-dark: #2563eb;
+            --success: #14b8a6;
+            --border: #2d3748;
+            --border-dark: #4a5568;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Subtle background pattern */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        [data-theme="dark"] body::before {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+
+        /* Progress indicator */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: var(--accent);
+            z-index: 1000;
+            transition: width 0.1s ease;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 1rem 0;
+            background: var(--bg-secondary);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            border-bottom-color: var(--border);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+        }
+
+        [data-theme="dark"] nav.scrolled {
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-images {
+            position: relative;
+            height: 36px;
+            width: 36px;
+        }
+
+        .logo img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 36px;
+            width: auto;
+            transition: opacity 0.3s ease;
+        }
+
+        .logo img.dark-logo {
+            opacity: 0;
+        }
+
+        [data-theme="dark"] .logo img.light-logo {
+            opacity: 0;
+        }
+
+        [data-theme="dark"] .logo img.dark-logo {
+            opacity: 1;
+        }
+
+        .logo-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            letter-spacing: 0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            transition: color 0.2s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.2s ease;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Theme toggle */
+        .theme-toggle {
+            background: var(--bg-accent);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 0.4rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            transition: all 0.2s ease;
+        }
+
+        .theme-toggle:hover {
+            border-color: var(--accent);
+        }
+
+        .theme-toggle span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            font-size: 0.85rem;
+            transition: all 0.2s ease;
+        }
+
+        .theme-toggle .light-icon {
+            background: var(--accent);
+            color: white;
+        }
+
+        [data-theme="dark"] .theme-toggle .light-icon {
+            background: transparent;
+            color: var(--text-muted);
+        }
+
+        [data-theme="dark"] .theme-toggle .dark-icon {
+            background: var(--accent);
+            color: white;
+        }
+
+        .theme-toggle .dark-icon {
+            background: transparent;
+            color: var(--text-muted);
+        }
+
+        /* Action buttons */
+        .action-buttons {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            z-index: 99;
+        }
+
+        .action-btn {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 1px solid var(--border);
+            background: var(--bg-secondary);
+            color: var(--text-secondary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .action-btn:hover {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        /* Tooltip */
+        .tooltip {
+            position: relative;
+        }
+
+        .tooltip::before {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: calc(100% + 8px);
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--text-primary);
+            color: var(--bg-primary);
+            padding: 0.5rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease;
+            z-index: 100;
+        }
+
+        .tooltip:hover::before {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8rem 2rem;
+            background: var(--bg-secondary);
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: var(--border);
+        }
+
+        .hero-content {
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .hero-logo {
+            position: relative;
+            height: 80px;
+            width: 80px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 2rem;
+        }
+
+        .hero-logo img {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 80px;
+            width: auto;
+            transition: opacity 0.3s ease;
+        }
+
+        .hero-logo img.dark-logo {
+            opacity: 0;
+        }
+
+        [data-theme="dark"] .hero-logo img.light-logo {
+            opacity: 0;
+        }
+
+        [data-theme="dark"] .hero-logo img.dark-logo {
+            opacity: 1;
+        }
+
+        .hero-label {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 2rem;
+            padding: 0.5rem 1.25rem;
+            border: 1px solid var(--accent);
+            border-radius: 2px;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 500;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .hero-subtitle {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 4rem;
+            font-weight: 400;
+        }
+
+        .hero-metrics {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .metric {
+            background: var(--bg-secondary);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            cursor: help;
+            transition: background 0.2s ease;
+        }
+
+        .metric:hover {
+            background: var(--bg-accent);
+        }
+
+        .metric-value {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.25rem;
+            font-weight: 600;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-label {
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 6rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            max-width: 600px;
+            margin-bottom: 4rem;
+        }
+
+        .section-header.centered {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .section-description {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Summary Section */
+        .summary-section {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+        }
+
+        .summary-card {
+            background: var(--bg-secondary);
+            padding: 2.5rem;
+            transition: background 0.2s ease;
+        }
+
+        .summary-card:hover {
+            background: var(--bg-accent);
+        }
+
+        .summary-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.75rem;
+            font-weight: 600;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 0.75rem;
+        }
+
+        .summary-title {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .summary-detail {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Tech Stack Section */
+        .tech-section {
+            background: var(--bg-accent);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .tech-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1.5rem 1rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .tech-item:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .tech-icon {
+            font-size: 2rem;
+        }
+
+        .tech-name {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Demos Section */
+        .demos-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .demo-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            display: block;
+            position: relative;
+        }
+
+        .demo-card:hover {
+            border-color: var(--accent);
+            box-shadow: 0 4px 20px rgba(15, 76, 129, 0.08);
+            transform: translateY(-2px);
+        }
+
+        [data-theme="dark"] .demo-card:hover {
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.15);
+        }
+
+        .demo-status {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 0.6rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 0.25rem 0.5rem;
+            border-radius: 3px;
+        }
+
+        .demo-status.production {
+            background: rgba(13, 115, 119, 0.1);
+            color: var(--success);
+        }
+
+        .demo-status.live {
+            background: rgba(34, 197, 94, 0.1);
+            color: #16a34a;
+        }
+
+        .demo-category {
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--success);
+            margin-bottom: 0.75rem;
+        }
+
+        .demo-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .demo-description {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.25rem;
+            line-height: 1.6;
+        }
+
+        .demo-link {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--accent);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .demo-link::after {
+            content: '→';
+            transition: transform 0.2s ease;
+        }
+
+        .demo-card:hover .demo-link::after {
+            transform: translateX(4px);
+        }
+
+        /* Skills Section */
+        .skills-section {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4rem;
+        }
+
+        .skills-category h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .skill-row {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--bg-accent);
+        }
+
+        .skill-name {
+            width: 120px;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        .skill-bar-container {
+            flex: 1;
+            height: 4px;
+            background: var(--bg-accent);
+            margin: 0 1rem;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .skill-bar {
+            height: 100%;
+            background: var(--accent);
+            border-radius: 2px;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .skill-row.visible .skill-bar {
+            transform: scaleX(1);
+        }
+
+        .skill-percent {
+            width: 40px;
+            text-align: right;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* Timeline Section */
+        .timeline-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 2rem;
+            padding: 2rem 0;
+            border-bottom: 1px solid var(--border);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .timeline-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .timeline-item:last-child {
+            border-bottom: none;
+        }
+
+        .timeline-date {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .timeline-content h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Impact Section */
+        .impact-section {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .impact-section .section-label {
+            color: var(--accent);
+        }
+
+        .impact-section .section-title {
+            color: var(--text-primary);
+        }
+
+        .impact-section .section-description {
+            color: var(--text-secondary);
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+        }
+
+        .impact-card {
+            background: var(--bg-secondary);
+            padding: 2.5rem 2rem;
+            text-align: center;
+        }
+
+        .impact-value {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 600;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 0.75rem;
+        }
+
+        .impact-label {
+            font-size: 0.85rem;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .impact-detail {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        /* Looking Ahead Section */
+        .goals-section {
+            background: var(--bg-accent);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .goals-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .goal-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .goal-card:hover {
+            border-color: var(--accent);
+        }
+
+        .goal-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--accent);
+            opacity: 0.3;
+            margin-bottom: 1rem;
+        }
+
+        .goal-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .goal-description {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Projects Section */
+        .projects-section {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+        }
+
+        .projects-filter {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.6rem 1.25rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            border: 1px solid var(--border);
+            background: var(--bg-secondary);
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .filter-btn.active {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: white;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+        }
+
+        .project-card {
+            background: var(--bg-secondary);
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .project-card:hover {
+            background: var(--bg-accent);
+        }
+
+        .project-status {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+        .project-status.completed {
+            background: #22c55e;
+        }
+
+        .project-status.production {
+            background: var(--accent);
+        }
+
+        .project-status.development {
+            background: #f59e0b;
+        }
+
+        .project-tag {
+            display: inline-block;
+            font-size: 0.6rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--success);
+            background: rgba(13, 115, 119, 0.08);
+            padding: 0.3rem 0.6rem;
+            margin-bottom: 1rem;
+        }
+
+        [data-theme="dark"] .project-tag {
+            background: rgba(20, 184, 166, 0.15);
+        }
+
+        .project-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .project-description {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .project-card {
+            cursor: pointer;
+        }
+
+        .project-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, margin-top 0.3s ease, opacity 0.3s ease;
+            opacity: 0;
+            margin-top: 0;
+        }
+
+        .project-card.expanded .project-details {
+            max-height: 200px;
+            opacity: 1;
+            margin-top: 1rem;
+        }
+
+        .project-details-content {
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .project-detail-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .project-detail-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .project-detail-icon {
+            color: var(--accent);
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        .project-expand-hint {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            margin-top: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .project-card.expanded .project-expand-hint {
+            display: none;
+        }
+
+        .expand-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .project-card.expanded .expand-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Clients Section */
+        .clients-logos {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .client-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 120px;
+            height: 60px;
+            background: var(--bg-accent);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            transition: all 0.2s ease;
+        }
+
+        .client-logo:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .clients-table {
+            border: 1px solid var(--border);
+            background: var(--bg-secondary);
+        }
+
+        .table-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .table-row:last-child {
+            border-bottom: none;
+        }
+
+        .table-header {
+            background: var(--bg-accent);
+        }
+
+        .table-header .table-cell {
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .table-cell {
+            padding: 1rem 1.5rem;
+            font-size: 0.9rem;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+        }
+
+        .table-row:not(.table-header):hover {
+            background: var(--bg-accent);
+        }
+
+        .table-cell.highlight {
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        /* Footer */
+        footer {
+            padding: 5rem 2rem;
+            background: var(--text-primary);
+            color: white;
+            text-align: center;
+        }
+
+        /* Dark mode footer - use dark background for readability */
+        [data-theme="dark"] footer {
+            background: #0a0d12;
+        }
+
+        .footer-logo {
+            margin-bottom: 2rem;
+        }
+
+        .footer-logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        /* Footer uses white logo (vtx_logo1) since footer has dark background in light mode */
+        /* In dark mode, footer background is also dark, so white logo works for both */
+
+        .footer-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-subtitle {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 2.5rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-link {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-link:hover {
+            color: white;
+        }
+
+        .footer-divider {
+            width: 60px;
+            height: 1px;
+            background: rgba(255,255,255,0.2);
+            margin: 0 auto 2rem;
+        }
+
+        .copyright {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.5);
+            letter-spacing: 0.05em;
+        }
+
+        /* Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-metrics {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .summary-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .demos-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .impact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .goals-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            section {
+                padding: 4rem 1.5rem;
+            }
+
+            .hero {
+                padding: 6rem 1.5rem;
+            }
+
+            .hero-metrics {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .metric {
+                padding: 1.5rem 1rem;
+            }
+
+            .metric-value {
+                font-size: 1.75rem;
+            }
+
+            .summary-grid,
+            .demos-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .impact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-item {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+
+            .table-row {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .action-buttons {
+                bottom: 1rem;
+                right: 1rem;
+            }
+
+            .action-btn {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            /* Hide interactive elements */
+            nav, .action-buttons, .progress-bar, .theme-toggle,
+            .projects-filter, .project-expand-hint, .filter-btn {
+                display: none !important;
+            }
+
+            /* Reset to light mode colors */
+            * {
+                color-adjust: exact !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            body {
+                background: white !important;
+                color: #1a1a1a !important;
+                font-size: 11pt;
+            }
+
+            body::before {
+                display: none;
+            }
+
+            /* Hero section */
+            .hero {
+                min-height: auto;
+                padding: 2rem;
+                background: white !important;
+                page-break-after: avoid;
+            }
+
+            .hero-logo img.dark-logo {
+                opacity: 0 !important;
+            }
+
+            .hero-logo img.light-logo {
+                opacity: 1 !important;
+            }
+
+            .hero-title {
+                font-size: 24pt;
+                color: #1a1a1a !important;
+            }
+
+            .hero-subtitle {
+                color: #4a4a4a !important;
+            }
+
+            .hero-metrics {
+                gap: 1rem;
+            }
+
+            /* Sections */
+            section {
+                padding: 1.5rem 2rem;
+                page-break-inside: avoid;
+                background: white !important;
+            }
+
+            .section-title {
+                font-size: 18pt;
+                color: #1a1a1a !important;
+            }
+
+            .section-label {
+                color: #0f4c81 !important;
+            }
+
+            /* Grids */
+            .summary-grid, .impact-grid, .projects-grid, .skills-grid, .tech-grid {
+                gap: 0.5rem;
+                background: #e5e5e5 !important;
+            }
+
+            .summary-card, .impact-card, .project-card, .tech-card {
+                background: white !important;
+                padding: 1rem;
+            }
+
+            /* Text colors */
+            .metric-value, .impact-value {
+                color: #0f4c81 !important;
+            }
+
+            .metric-label, .impact-label {
+                color: #1a1a1a !important;
+            }
+
+            /* Skills */
+            .skill-bar-container {
+                background: #e5e5e5 !important;
+            }
+
+            .skill-bar {
+                background: #0f4c81 !important;
+                transform: scaleX(1) !important;
+            }
+
+            .skill-name, .skill-percent {
+                color: #1a1a1a !important;
+            }
+
+            /* Project cards - show expanded */
+            .project-card {
+                page-break-inside: avoid;
+            }
+
+            .project-details {
+                max-height: none !important;
+                opacity: 1 !important;
+                margin-top: 0.5rem !important;
+            }
+
+            .project-name {
+                color: #1a1a1a !important;
+            }
+
+            .project-description, .project-detail-item {
+                color: #4a4a4a !important;
+            }
+
+            .project-tag {
+                background: #e5e5e5 !important;
+                color: #0d7377 !important;
+            }
+
+            /* Timeline */
+            .timeline-item {
+                page-break-inside: avoid;
+            }
+
+            .timeline-year {
+                color: #0f4c81 !important;
+            }
+
+            .timeline-content h3 {
+                color: #1a1a1a !important;
+            }
+
+            .timeline-content p {
+                color: #4a4a4a !important;
+            }
+
+            /* Demo cards */
+            .demo-card {
+                background: white !important;
+                border: 1px solid #e5e5e5 !important;
+            }
+
+            .demo-title {
+                color: #1a1a1a !important;
+            }
+
+            .demo-description {
+                color: #4a4a4a !important;
+            }
+
+            /* Footer */
+            footer {
+                background: #1a1a1a !important;
+                padding: 2rem;
+                page-break-before: avoid;
+            }
+
+            .footer-logo img {
+                filter: brightness(0) invert(1);
+            }
+
+            /* Reveal animations - show all */
+            .reveal, .timeline-item, .skill-row {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+
+            /* Goals */
+            .goals-grid {
+                page-break-inside: avoid;
+            }
+
+            .goal-card {
+                background: white !important;
+                border: 1px solid #e5e5e5 !important;
+            }
+
+            .goal-title {
+                color: #1a1a1a !important;
+            }
+
+            .goal-description {
+                color: #4a4a4a !important;
+            }
+
+            /* Clients */
+            .clients-section {
+                page-break-inside: avoid;
+            }
+
+            /* Page breaks */
+            .hero {
+                page-break-after: always;
+            }
+
+            #skills {
+                page-break-before: always;
+            }
+
+            #projects {
+                page-break-before: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-images">
+                    <img src="vtx_logo2.png" alt="Versatex" class="light-logo">
+                    <img src="vtx_logo1.png" alt="Versatex" class="dark-logo">
+                </div>
+                <span class="logo-text">M. Lawali</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#summary">Summary</a></li>
+                <li><a href="#demos">Applications</a></li>
+                <li><a href="#skills">Expertise</a></li>
+                <li><a href="#timeline">Milestones</a></li>
+                <li><a href="#impact">Impact</a></li>
+                <li><a href="#goals">2026 Goals</a></li>
+                <li>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                        <span class="light-icon">☀</span>
+                        <span class="dark-icon">☾</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+        <button class="action-btn tooltip" id="printBtn" data-tooltip="Download PDF" aria-label="Print/Download PDF">
+            ⬇
+        </button>
+        <button class="action-btn tooltip" id="topBtn" data-tooltip="Back to Top" aria-label="Back to top">
+            ↑
+        </button>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-logo">
+                <img src="vtx_logo2.png" alt="Versatex" class="light-logo">
+                <img src="vtx_logo1.png" alt="Versatex" class="dark-logo">
+            </div>
+            <span class="hero-label">Annual Review 2025</span>
+            <h1 class="hero-title">Delivering Strategic Value Through Data-Driven Solutions</h1>
+            <p class="hero-subtitle">A comprehensive overview of enterprise analytics platforms, machine learning solutions, and business applications developed throughout 2024-2025.</p>
+            <div class="hero-metrics">
+                <div class="metric tooltip" data-tooltip="CCHMC Cost Savings Analysis">
+                    <div class="metric-value">$4.65M</div>
+                    <div class="metric-label">Savings Identified</div>
+                </div>
+                <div class="metric tooltip" data-tooltip="Across DefoxxAnalytics & Bomino">
+                    <div class="metric-value">50+</div>
+                    <div class="metric-label">Projects Delivered</div>
+                </div>
+                <div class="metric tooltip" data-tooltip="5 Enterprise Clients">
+                    <div class="metric-value">$153.7M</div>
+                    <div class="metric-label">Spend Analyzed</div>
+                </div>
+                <div class="metric tooltip" data-tooltip="1.7 Month Payback Period">
+                    <div class="metric-value">598%</div>
+                    <div class="metric-label">ROI Achieved</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Executive Summary -->
+    <section id="summary" class="summary-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">Executive Summary</div>
+                <h2 class="section-title">Key Accomplishments</h2>
+                <p class="section-description">Strategic deliverables across procurement analytics, enterprise applications, and machine learning initiatives.</p>
+            </div>
+            <div class="summary-grid reveal">
+                <div class="summary-card">
+                    <div class="summary-number">50+</div>
+                    <div class="summary-title">Projects Delivered</div>
+                    <div class="summary-detail">Across DefoxxAnalytics & personal repositories</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-number">$4.65M</div>
+                    <div class="summary-title">Cost Savings Identified</div>
+                    <div class="summary-detail">CCHMC analysis — 14% of $33.3M spend</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-number">$153.7M</div>
+                    <div class="summary-title">Total Spend Analyzed</div>
+                    <div class="summary-detail">Across 5 enterprise client deployments</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-number">598%</div>
+                    <div class="summary-title">Return on Investment</div>
+                    <div class="summary-detail">1.7 month payback period achieved</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-number">10+</div>
+                    <div class="summary-title">ML Models Deployed</div>
+                    <div class="summary-detail">XGBoost, LightGBM, CatBoost, Prophet</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-number">80-90%</div>
+                    <div class="summary-title">Efficiency Gains</div>
+                    <div class="summary-detail">Through automation & incremental processing</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="tech" class="tech-section">
+        <div class="container">
+            <div class="section-header centered reveal">
+                <div class="section-label">Technology Stack</div>
+                <h2 class="section-title">Key Technologies Used</h2>
+                <p class="section-description">Core technologies powering our enterprise solutions.</p>
+            </div>
+            <div class="tech-grid reveal">
+                <div class="tech-item">
+                    <span class="tech-icon">🐍</span>
+                    <span class="tech-name">Python</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-icon">⚛️</span>
+                    <span class="tech-name">React</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-icon">🎯</span>
+                    <span class="tech-name">Django</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-icon">📊</span>
+                    <span class="tech-name">Chart.js</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-icon">🤖</span>
+                    <span class="tech-name">XGBoost</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-icon">🧠</span>
+                    <span class="tech-name">OpenAI</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-icon">🐘</span>
+                    <span class="tech-name">PostgreSQL</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-icon">🔥</span>
+                    <span class="tech-name">Streamlit</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Demos -->
+    <section id="demos">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">Production Applications</div>
+                <h2 class="section-title">Live Demonstrations</h2>
+                <p class="section-description">Production-ready applications currently deployed and serving enterprise clients.</p>
+            </div>
+            <div class="demos-grid">
+                <a href="https://defoxxanalytics.github.io/vstx-etn/" target="_blank" class="demo-card reveal">
+                    <span class="demo-status production">Production</span>
+                    <div class="demo-category">Procurement Analytics</div>
+                    <h3 class="demo-title">VSTX Analytics Dashboard</h3>
+                    <p class="demo-description">Core analytics platform featuring 8 modules including Pareto analysis, spend stratification, and forecasting.</p>
+                    <span class="demo-link">View Application</span>
+                </a>
+                <a href="https://defoxxanalytics.github.io/Clients-Reports/" target="_blank" class="demo-card reveal">
+                    <span class="demo-status live">Live</span>
+                    <div class="demo-category">Client Dashboards</div>
+                    <h3 class="demo-title">Multi-Client Reports</h3>
+                    <p class="demo-description">Unified reporting platform serving 5 clients with $153.7M in combined spend analysis.</p>
+                    <span class="demo-link">View Application</span>
+                </a>
+                <a href="https://defoxxanalytics.github.io/CostSavings-CCHMC/" target="_blank" class="demo-card reveal">
+                    <span class="demo-status live">Live</span>
+                    <div class="demo-category">Savings Analysis</div>
+                    <h3 class="demo-title">CostSavings CCHMC</h3>
+                    <p class="demo-description">Comprehensive savings identification platform — $4.65M identified across 179 suppliers.</p>
+                    <span class="demo-link">View Application</span>
+                </a>
+                <a href="https://defoxxanalytics.github.io/Procure-Center/" target="_blank" class="demo-card reveal">
+                    <span class="demo-status production">Production</span>
+                    <div class="demo-category">Excellence Toolkit</div>
+                    <h3 class="demo-title">Procurement Center</h3>
+                    <p class="demo-description">ROI calculators, methodology guides, and strategic analysis tools for procurement teams.</p>
+                    <span class="demo-link">View Application</span>
+                </a>
+                <a href="https://defoxxanalytics.github.io/SOP.v3/" target="_blank" class="demo-card reveal">
+                    <span class="demo-status production">Production</span>
+                    <div class="demo-category">Documentation</div>
+                    <h3 class="demo-title">SOP Platform v3</h3>
+                    <p class="demo-description">Progressive Web App with offline capability, timeline visualization, and decision support.</p>
+                    <span class="demo-link">View Application</span>
+                </a>
+                <a href="https://defoxxanalytics.github.io/Procure-Intel2/" target="_blank" class="demo-card reveal">
+                    <span class="demo-status production">Production</span>
+                    <div class="demo-category">Analytics</div>
+                    <h3 class="demo-title">Procure-Intel 2</h3>
+                    <p class="demo-description">Enhanced analytics with customizable filters, subcategory drill-down, and mobile responsiveness.</p>
+                    <span class="demo-link">View Application</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">Technical Expertise</div>
+                <h2 class="section-title">Competency Matrix</h2>
+                <p class="section-description">Full-stack development capabilities across multiple technology domains and business verticals.</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skills-category reveal">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-row">
+                        <span class="skill-name">Python</span>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 95%;"></div>
+                        </div>
+                        <span class="skill-percent">95%</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">JavaScript</span>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 80%;"></div>
+                        </div>
+                        <span class="skill-percent">80%</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">TypeScript</span>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 70%;"></div>
+                        </div>
+                        <span class="skill-percent">70%</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">SQL</span>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 80%;"></div>
+                        </div>
+                        <span class="skill-percent">80%</span>
+                    </div>
+                </div>
+                <div class="skills-category reveal">
+                    <h3>Frameworks & Libraries</h3>
+                    <div class="skill-row">
+                        <span class="skill-name">Streamlit</span>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 95%;"></div>
+                        </div>
+                        <span class="skill-percent">95%</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">Django/DRF</span>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 80%;"></div>
+                        </div>
+                        <span class="skill-percent">80%</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">React</span>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 70%;"></div>
+                        </div>
+                        <span class="skill-percent">70%</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">Chart.js</span>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 95%;"></div>
+                        </div>
+                        <span class="skill-percent">95%</span>
+                    </div>
+                </div>
+                <div class="skills-category reveal">
+                    <h3>Machine Learning & AI</h3>
+                    <div class="skill-row">
+                        <span class="skill-name">Scikit-learn</span>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 95%;"></div>
+                        </div>
+                        <span class="skill-percent">95%</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">XGBoost</span>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 85%;"></div>
+                        </div>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">OpenAI API</span>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 80%;"></div>
+                        </div>
+                        <span class="skill-percent">80%</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">Prophet</span>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 75%;"></div>
+                        </div>
+                        <span class="skill-percent">75%</span>
+                    </div>
+                </div>
+                <div class="skills-category reveal">
+                    <h3>Domain Expertise</h3>
+                    <div class="skill-row">
+                        <span class="skill-name">Procurement</span>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 95%;"></div>
+                        </div>
+                        <span class="skill-percent">95%</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">Data Viz</span>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 95%;"></div>
+                        </div>
+                        <span class="skill-percent">95%</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">ETL/Data</span>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 85%;"></div>
+                        </div>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">API Dev</span>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 80%;"></div>
+                        </div>
+                        <span class="skill-percent">80%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section id="timeline">
+        <div class="container">
+            <div class="section-header centered reveal">
+                <div class="section-label">Development Timeline</div>
+                <h2 class="section-title">Key Milestones</h2>
+                <p class="section-description">Major deliverables and achievements throughout the review period.</p>
+            </div>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-date">Jun 2025</div>
+                    <div class="timeline-content">
+                        <h3>vstx-etn-advpro Launch</h3>
+                        <p>First production analytics platform deployed with industry benchmarks and advanced predictive features.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Jul 2025</div>
+                    <div class="timeline-content">
+                        <h3>Procure-Intel Suite Release</h3>
+                        <p>Complete procurement analytics toolkit with customizable filters, mobile responsiveness, and export capabilities.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Aug 2025</div>
+                    <div class="timeline-content">
+                        <h3>CostSavings-CCHMC Deployment</h3>
+                        <p>$4.65M in savings opportunities identified for Cincinnati Children's Hospital across 179 suppliers and 70,697 transactions.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Aug 2025</div>
+                    <div class="timeline-content">
+                        <h3>Multi-Client Dashboard Launch</h3>
+                        <p>Unified analytics platform serving 5 enterprise clients with $153.7M in combined annual spend.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Sep 2025</div>
+                    <div class="timeline-content">
+                        <h3>Zap_Data_Processing Deployment</h3>
+                        <p>Enterprise ETL system achieving 99.2% success rate and delivering $250K in annual automation savings.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Nov 2025</div>
+                    <div class="timeline-content">
+                        <h3>Django + React Platform Launch</h3>
+                        <p>Full-stack enterprise capability with multi-tenancy, Celery/Redis integration, and comprehensive API coverage.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Impact -->
+    <section id="impact" class="impact-section">
+        <div class="container">
+            <div class="section-header centered reveal">
+                <div class="section-label">Business Outcomes</div>
+                <h2 class="section-title">Measurable Impact</h2>
+                <p class="section-description">Quantified results demonstrating value delivered across all initiatives.</p>
+            </div>
+            <div class="impact-grid reveal">
+                <div class="impact-card">
+                    <div class="impact-value">$4.65M</div>
+                    <div class="impact-label">Cost Savings Identified</div>
+                    <div class="impact-detail">14% of $33.3M spend analyzed</div>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-value">598%</div>
+                    <div class="impact-label">Return on Investment</div>
+                    <div class="impact-detail">1.7 month payback period</div>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-value">99.9%</div>
+                    <div class="impact-label">Platform Uptime</div>
+                    <div class="impact-detail">Zero security incidents</div>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-value">$250K</div>
+                    <div class="impact-label">Annual Automation Savings</div>
+                    <div class="impact-detail">ETL system efficiency gains</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Looking Ahead / 2026 Goals -->
+    <section id="goals" class="goals-section">
+        <div class="container">
+            <div class="section-header centered reveal">
+                <div class="section-label">Looking Ahead</div>
+                <h2 class="section-title">2026 Strategic Goals</h2>
+                <p class="section-description">Key initiatives and focus areas for continued growth and innovation.</p>
+            </div>
+            <div class="goals-grid reveal">
+                <div class="goal-card">
+                    <div class="goal-number">01</div>
+                    <h3 class="goal-title">Expand Client Portfolio</h3>
+                    <p class="goal-description">Onboard 3-5 new enterprise clients and scale existing deployments to handle $300M+ in spend analysis.</p>
+                </div>
+                <div class="goal-card">
+                    <div class="goal-number">02</div>
+                    <h3 class="goal-title">Advanced AI Integration</h3>
+                    <p class="goal-description">Implement GPT-4 powered natural language queries and automated insight generation across all analytics platforms.</p>
+                </div>
+                <div class="goal-card">
+                    <div class="goal-number">03</div>
+                    <h3 class="goal-title">Real-Time Analytics</h3>
+                    <p class="goal-description">Deploy streaming data pipelines for real-time spend monitoring and automated anomaly detection alerts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header centered reveal">
+                <div class="section-label">Project Portfolio</div>
+                <h2 class="section-title">Selected Work</h2>
+                <p class="section-description">Representative projects across key technology and business domains.</p>
+            </div>
+            <div class="projects-filter reveal">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="analytics">Analytics</button>
+                <button class="filter-btn" data-filter="ml">Machine Learning</button>
+                <button class="filter-btn" data-filter="enterprise">Enterprise</button>
+                <button class="filter-btn" data-filter="automation">Automation</button>
+            </div>
+            <div class="projects-grid reveal">
+                <div class="project-card" data-category="analytics">
+                    <span class="project-status production" title="Production"></span>
+                    <span class="project-tag">Analytics</span>
+                    <h3 class="project-name">VSTX Analytics Dashboard</h3>
+                    <p class="project-description">Core platform with 8 analytics modules including Pareto, stratification, and forecasting capabilities.</p>
+                    <div class="project-expand-hint"><span class="expand-icon">+</span> Click for details</div>
+                    <div class="project-details">
+                        <div class="project-details-content">
+                            <div class="project-detail-item"><span class="project-detail-icon">></span> 8 specialized analytics modules</div>
+                            <div class="project-detail-item"><span class="project-detail-icon">></span> Python, Streamlit, Plotly stack</div>
+                            <div class="project-detail-item"><span class="project-detail-icon">></span> Serves 5+ enterprise clients</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="analytics">
+                    <span class="project-status completed" title="Completed"></span>
+                    <span class="project-tag">Analytics</span>
+                    <h3 class="project-name">CostSavings-CCHMC</h3>
+                    <p class="project-description">$4.65M savings identified across 179 suppliers with 70,697 transactions processed.</p>
+                    <div class="project-expand-hint"><span class="expand-icon">+</span> Click for details</div>
+                    <div class="project-details">
+                        <div class="project-details-content">
+                            <div class="project-detail-item"><span class="project-detail-icon">></span> 598% ROI achieved</div>
+                            <div class="project-detail-item"><span class="project-detail-icon">></span> 179 suppliers analyzed</div>
+                            <div class="project-detail-item"><span class="project-detail-icon">></span> 70,697 transactions processed</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="ml">
+                    <span class="project-status production" title="Production"></span>
+                    <span class="project-tag">Machine Learning</span>
+                    <h3 class="project-name">ML-SWAK</h3>
+                    <p class="project-description">Comprehensive ML toolkit with XGBoost, LightGBM, Prophet, and SARIMA implementations.</p>
+                    <div class="project-expand-hint"><span class="expand-icon">+</span> Click for details</div>
+                    <div class="project-details">
+                        <div class="project-details-content">
+                            <div class="project-detail-item"><span class="project-detail-icon">></span> 4 ML algorithms supported</div>
+                            <div class="project-detail-item"><span class="project-detail-icon">></span> Automated hyperparameter tuning</div>
+                            <div class="project-detail-item"><span class="project-detail-icon">></span> Model comparison dashboard</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="ml">
+                    <span class="project-status production" title="Production"></span>
+                    <span class="project-tag">Machine Learning</span>
+                    <h3 class="project-name">SpendPredict</h3>
+                    <p class="project-description">Enterprise ML platform for spend forecasting with model versioning and automated deployment.</p>
+                    <div class="project-expand-hint"><span class="expand-icon">+</span> Click for details</div>
+                    <div class="project-details">
+                        <div class="project-details-content">
+                            <div class="project-detail-item"><span class="project-detail-icon">></span> Time-series forecasting</div>
+                            <div class="project-detail-item"><span class="project-detail-icon">></span> Model versioning system</div>
+                            <div class="project-detail-item"><span class="project-detail-icon">></span> Automated retraining pipeline</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="enterprise">
+                    <span class="project-status production" title="Production"></span>
+                    <span class="project-tag">Enterprise</span>
+                    <h3 class="project-name">Short Orders Management</h3>
+                    <p class="project-description">Django + React + React Native staffing system with 100% API test coverage.</p>
+                    <div class="project-expand-hint"><span class="expand-icon">+</span> Click for details</div>
+                    <div class="project-details">
+                        <div class="project-details-content">
+                            <div class="project-detail-item"><span class="project-detail-icon">></span> Full-stack Django + React</div>
+                            <div class="project-detail-item"><span class="project-detail-icon">></span> React Native mobile app</div>
+                            <div class="project-detail-item"><span class="project-detail-icon">></span> 100% API test coverage</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="enterprise">
+                    <span class="project-status development" title="In Development"></span>
+                    <span class="project-tag">Enterprise</span>
+                    <h3 class="project-name">Django + React v2</h3>
+                    <p class="project-description">Multi-tenant analytics with Celery, Redis, and organization-based data isolation.</p>
+                    <div class="project-expand-hint"><span class="expand-icon">+</span> Click for details</div>
+                    <div class="project-details">
+                        <div class="project-details-content">
+                            <div class="project-detail-item"><span class="project-detail-icon">></span> Multi-tenant architecture</div>
+                            <div class="project-detail-item"><span class="project-detail-icon">></span> Celery + Redis task queue</div>
+                            <div class="project-detail-item"><span class="project-detail-icon">></span> Organization-based isolation</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="automation">
+                    <span class="project-status completed" title="Completed"></span>
+                    <span class="project-tag">Automation</span>
+                    <h3 class="project-name">Savings-Slides-Generator</h3>
+                    <p class="project-description">Excel to PowerPoint automation evolved through 3 architecture versions.</p>
+                    <div class="project-expand-hint"><span class="expand-icon">+</span> Click for details</div>
+                    <div class="project-details">
+                        <div class="project-details-content">
+                            <div class="project-detail-item"><span class="project-detail-icon">></span> 3 architecture iterations</div>
+                            <div class="project-detail-item"><span class="project-detail-icon">></span> python-pptx automation</div>
+                            <div class="project-detail-item"><span class="project-detail-icon">></span> 80-90% time savings</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="automation">
+                    <span class="project-status production" title="Production"></span>
+                    <span class="project-tag">Automation</span>
+                    <h3 class="project-name">Zapro_Data_Processing</h3>
+                    <p class="project-description">ETL system achieving 99.2% success rate.</p>
+                    <div class="project-expand-hint"><span class="expand-icon">+</span> Click for details</div>
+                    <div class="project-details">
+                        <div class="project-details-content">
+                            <div class="project-detail-item"><span class="project-detail-icon">></span> 99.2% success rate</div>
+                            <div class="project-detail-item"><span class="project-detail-icon">></span> Automated ETL pipeline</div>
+                            <div class="project-detail-item"><span class="project-detail-icon">></span> Streamlined data processing</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="ml">
+                    <span class="project-status production" title="Production"></span>
+                    <span class="project-tag">Machine Learning</span>
+                    <h3 class="project-name">DEF-Classifier</h3>
+                    <p class="project-description">AI-powered supplier taxonomy classification using OpenAI GPT integration.</p>
+                    <div class="project-expand-hint"><span class="expand-icon">+</span> Click for details</div>
+                    <div class="project-details">
+                        <div class="project-details-content">
+                            <div class="project-detail-item"><span class="project-detail-icon">></span> OpenAI GPT integration</div>
+                            <div class="project-detail-item"><span class="project-detail-icon">></span> Automated classification</div>
+                            <div class="project-detail-item"><span class="project-detail-icon">></span> Supplier taxonomy mapping</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients -->
+    <section id="clients">
+        <div class="container">
+            <div class="section-header centered reveal">
+                <div class="section-label">Client Engagements</div>
+                <h2 class="section-title">Enterprise Deployments</h2>
+                <p class="section-description">Active client implementations with quantified spend analysis coverage.</p>
+            </div>
+            <div class="clients-logos reveal">
+                <div class="client-logo">CCHMC</div>
+                <div class="client-logo">Eaton</div>
+                <div class="client-logo">UCH</div>
+                <div class="client-logo">ACME</div>
+                <div class="client-logo">Contoso</div>
+            </div>
+            <div class="clients-table reveal">
+                <div class="table-row table-header">
+                    <div class="table-cell">Client</div>
+                    <div class="table-cell">Annual Spend</div>
+                    <div class="table-cell">Suppliers</div>
+                    <div class="table-cell">Status</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">CCHMC</div>
+                    <div class="table-cell">$78.4M</div>
+                    <div class="table-cell">269</div>
+                    <div class="table-cell">Live</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">Eaton</div>
+                    <div class="table-cell">$8.0M</div>
+                    <div class="table-cell">163</div>
+                    <div class="table-cell">Live</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">UCH</div>
+                    <div class="table-cell">$14.1M</div>
+                    <div class="table-cell">180</div>
+                    <div class="table-cell">Live</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">ACME (Demo)</div>
+                    <div class="table-cell">$26.5M</div>
+                    <div class="table-cell">80</div>
+                    <div class="table-cell">Demo</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">Contoso (Demo)</div>
+                    <div class="table-cell">$26.7M</div>
+                    <div class="table-cell">50</div>
+                    <div class="table-cell">Demo</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell highlight">Total</div>
+                    <div class="table-cell highlight">$153.7M</div>
+                    <div class="table-cell highlight">730</div>
+                    <div class="table-cell">—</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">
+            <img src="vtx_logo1.png" alt="Versatex">
+        </div>
+        <h2 class="footer-title">Thank You</h2>
+        <p class="footer-subtitle">Looking forward to continued innovation and delivering value in the year ahead.</p>
+        <div class="footer-links">
+            <a href="https://github.com/DefoxxAnalytics" target="_blank" class="footer-link">GitHub (Organization)</a>
+            <a href="https://github.com/bomino" target="_blank" class="footer-link">GitHub (Personal)</a>
+            <a href="mailto:mlawali@versatexmsp.com" class="footer-link">mlawali@versatexmsp.com</a>
+        </div>
+        <div class="footer-divider"></div>
+        <p class="copyright">© 2025 M. Lawali — VSTX / Defoxx Analytics</p>
+    </footer>
+
+    <script>
+        // Theme toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+
+        // Progress bar
+        const progressBar = document.getElementById('progressBar');
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            progressBar.style.width = scrollPercent + '%';
+        });
+
+        // Navigation scroll effect and active state
+        const nav = document.querySelector('nav');
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+
+            // Update active nav link
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (window.scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Action buttons
+        document.getElementById('printBtn').addEventListener('click', () => {
+            window.print();
+        });
+
+        document.getElementById('topBtn').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+
+                    // Animate skill bars
+                    if (entry.target.classList.contains('skills-category')) {
+                        entry.target.querySelectorAll('.skill-row').forEach((row, i) => {
+                            setTimeout(() => row.classList.add('visible'), i * 100);
+                        });
+                    }
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal, .timeline-item, .skill-row').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Project filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.dataset.filter;
+
+                projectCards.forEach(card => {
+                    const show = filter === 'all' || card.dataset.category === filter;
+                    card.style.display = show ? 'block' : 'none';
+                });
+            });
+        });
+
+        // Expandable project cards
+        projectCards.forEach(card => {
+            card.addEventListener('click', () => {
+                card.classList.toggle('expanded');
+            });
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
