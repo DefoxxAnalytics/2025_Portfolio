@@ -583,6 +583,63 @@
             letter-spacing: 0.05em;
         }
 
+        /* Core Analytics Modules Section */
+        .modules-section {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+        }
+
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+        }
+
+        .module-card {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .module-card:hover {
+            background: var(--bg-accent);
+        }
+
+        .module-icon {
+            font-size: 1.75rem;
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+
+        .module-name {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .module-description {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        @media (max-width: 992px) {
+            .modules-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .modules-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* Demos Section */
         .demos-grid {
             display: grid;
@@ -1831,6 +1888,59 @@
                     <p class="demo-description">Enhanced analytics with customizable filters, subcategory drill-down, and mobile responsiveness.</p>
                     <span class="demo-link">View Application</span>
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Analytics Modules -->
+    <section id="modules" class="modules-section">
+        <div class="container">
+            <div class="section-header centered reveal">
+                <div class="section-label">Platform Capabilities</div>
+                <h2 class="section-title">Core Analytics Modules</h2>
+                <p class="section-description">8 specialized modules powering the VSTX Analytics Dashboard suite.</p>
+            </div>
+            <div class="modules-grid reveal">
+                <div class="module-card">
+                    <span class="module-icon">📊</span>
+                    <h3 class="module-name">Executive Overview</h3>
+                    <p class="module-description">Real-time KPI dashboards with executive-level insights</p>
+                </div>
+                <div class="module-card">
+                    <span class="module-icon">🏷️</span>
+                    <h3 class="module-name">Category Intelligence</h3>
+                    <p class="module-description">Multi-level category analysis and spend breakdown</p>
+                </div>
+                <div class="module-card">
+                    <span class="module-icon">🏢</span>
+                    <h3 class="module-name">Supplier Analytics</h3>
+                    <p class="module-description">Performance benchmarking and supplier scoring</p>
+                </div>
+                <div class="module-card">
+                    <span class="module-icon">📈</span>
+                    <h3 class="module-name">Pareto Analysis</h3>
+                    <p class="module-description">80/20 rule for strategic prioritization</p>
+                </div>
+                <div class="module-card">
+                    <span class="module-icon">🎯</span>
+                    <h3 class="module-name">Spend Stratification</h3>
+                    <p class="module-description">Kraljic Matrix alignment and segmentation</p>
+                </div>
+                <div class="module-card">
+                    <span class="module-icon">📅</span>
+                    <h3 class="module-name">Seasonality Intelligence</h3>
+                    <p class="module-description">Pattern recognition and trend analysis</p>
+                </div>
+                <div class="module-card">
+                    <span class="module-icon">🔍</span>
+                    <h3 class="module-name">Tail Spend Analysis</h3>
+                    <p class="module-description">15% average savings identification</p>
+                </div>
+                <div class="module-card">
+                    <span class="module-icon">🔮</span>
+                    <h3 class="module-name">Predictive Analytics</h3>
+                    <p class="module-description">12-month forecasting with ML models</p>
+                </div>
             </div>
         </div>
     </section>
